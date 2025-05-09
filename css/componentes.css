@@ -71,7 +71,20 @@ h1{
     align-items: center;
 }
 
+
 footer div{
     background-color: #1618a1;
     border-radius: 20%;
+}
+
+.menu-nav a:hover {
+    color: #aad4ff;
+}
+
+.carousel-control-prev{
+    height: 90%;
+}
+
+.carousel-control-next{
+    height: 90%;
 }
