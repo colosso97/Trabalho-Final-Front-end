@@ -10,6 +10,7 @@ html {
     background-size: cover;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('../img/historia\ do\ cinema.png');
+    /* background-color: grey; */
     background-size: cover;
     background-position: center;
 }
@@ -35,20 +36,23 @@ ul {
 }
 
 h1 {
-    width: 50%;
-    height: auto;
-    background-color: #1618a1;
-    color: white;
-    border-radius: 15%;
-    padding: 2em;
-    text-align: center;
+width: 50%;
+height: auto;
+background: linear-gradient(135deg, #1618a1, #4b5bd5);
+color: white;
+border-radius: 15px;
+padding: 2em;
+text-align: center;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+font-family: 'Arial', sans-serif;
+font-size: 1.2em;
 }
 
 .imagens1 img {
     display: flex;
     border-radius: 50%;
     object-fit: cover;
-    background-color: #1618a1;
+    background: linear-gradient(135deg, #1618a1, #4b5bd5);
     margin-top: 2vh;
     padding: 1vh;
 }
@@ -64,23 +68,60 @@ h1 {
 
 /*Deixando nome do lado da foto*/
 
-.nomes1 li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1vh;
-    color: white;
+.nomes1{
+    background-color: none;
+    background: none;
+    width: 30%;
 }
 
-.alunos {
+.alunos{
+    background-color: rgba(128, 128, 128, 0.507);
+
+    width: 70%;
+    align-items: center;
+    margin: 1vh;
+    padding: 1vh
+
+}
+.imagens1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info {
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
     border-radius: 50%;
     align-items: center;
+    flex-direction: column;
+    text-align: left;
 }
 
 footer div {
-    background-color: #1618a1;
+    background: linear-gradient(135deg, #1618a1, #4b5bd5);
     border-radius: 20%;
+
+}
+
+footer div p {
+    color: white;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    border-radius: 50%;
+    align-items: center;
+    text-align: right;
+    flex-direction: row;
+}
+
+footer img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap:wrap;
+    position: fixed;
 }
