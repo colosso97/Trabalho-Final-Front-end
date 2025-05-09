@@ -27,3 +27,11 @@
 .menu-nav a:hover {
     color: #aad4ff;
 }
+
+.carousel-control-prev{
+    height: 90%;
+}
+
+.carousel-control-next{
+    height: 90%;
+}
