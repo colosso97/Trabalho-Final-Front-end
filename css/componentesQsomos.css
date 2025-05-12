@@ -1,61 +1,57 @@
-/* adicionando border radious nas imagens e deixando em coluna */
-
-.conteudo-titulo {
-    background: linear-gradient(135deg, #1618a1, #4b5bd5);
-    color: white;
-    border-radius: 15px;
-    padding: 2em;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    font-weight: bolder;
-}
-
-.imagens {
+.conteudo-quem-somos {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.imagens img {
+.conteudo-titulo {
+    width: 100%;
+    /* Deixando o fundo do título em degrade */
+    background: linear-gradient(135deg, #1618a1, #4b5bd5);
+    color: white;
+    /* adicionando border radious nas imagens e deixando em coluna */
+    border-radius: 30PX;
+    padding: 2em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    font-weight: bolder;
+    text-align: center;
+}
+
+.conteudo-quem-somos img {
     display: flex;
-    border-radius: 50%;
+    /* A imagem mantém sua proporção e é cortada para se ajustar */
     object-fit: cover;
+    border-radius: 50%;
+    /* Deixando a borda das imagens em degrade */
     background: linear-gradient(135deg, #1618a1, #4b5bd5);
     margin-top: 2vh;
     padding: 1vh;
 }
 
-.imagens div p {
-    display: flex;
-    flex-direction: column;
+.alunos {
+    background-color: rgba(128, 128, 128, 0.507);
+
+    width: 60%;
     align-items: center;
-    justify-content: right;
+    margin: 1vh;
+    padding: 1vh;
+}
+
+.nomes {
+    text-align: center;
     color: white;
     font-weight: bolder;
 }
 
-.alunos {
-    background-color: rgba(128, 128, 128, 0.507);
-
-    width: 70%;
-    align-items: center;
-    margin: 1vh;
-    padding: 1vh
-}
-
-.nomes {
-    background-color: none;
-    background: none;
-    width: 30%;
-}
-
 .info {
     display: flex;
+    flex-direction: column;
     gap: 3rem;
     flex-wrap: wrap;
     border-radius: 50%;
     align-items: center;
-    flex-direction: column;
-    text-align: left;
+}
+
+.mb-2 a{
+    color: white;
 }
