@@ -4,15 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - CineSerra</title>
+  <link rel="shortcut icon" href="../ico/icons8-ticket-booth-96.ico" type="image/x-icon">
+  <title>Contato | CineSerra</title>
+  <link rel="stylesheet" href="../css/base.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <!-- Cabeçalho -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">CineSerra</a>
+      <a class="navbar-brand" href="../index.html"><img width="48" height="48"
+          src="https://img.icons8.com/color/48/ticket-booth.png" alt="ticket-booth" />CineSerra</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -25,8 +28,7 @@
     </div>
   </nav>
 
-  <!-- a -->
-
+  <!-- Formulário para preencher e entramos em contato -->
   <main class="container py-5">
     <h2>Entre em contato</h2>
     <form id="contatoForm">
@@ -45,11 +47,13 @@
       <button type="submit" class="btn btn-danger">Enviar</button>
     </form>
 
+    <!-- Lança a mensagem quando as informações foram enviadas com êxito -->
     <div id="mensagemSucesso" class="alert alert-success mt-3 d-none" role="alert">
       Obrigado pelo contato! Recebemos sua mensagem e responderemos em breve. 🎬
     </div>
   </main>
 
+  <!-- Rodapé -->
   <footer class="bg-dark text-white text-center py-3">
     <p>© 2025 CineSerra Todos os direitos reservados.</p>
     <div>
@@ -59,46 +63,8 @@
     </div>
   </footer>
 
-  <!-- Firebase -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
-    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-database.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyBJYK5t9icWafVMrXJsBtOtQHMtpKcGJ-U",
-      authDomain: "cineserra-9bca4.firebaseapp.com",
-      projectId: "cineserra-9bca4",
-      storageBucket: "cineserra-9bca4.appspot.com",
-      messagingSenderId: "915111612570",
-      appId: "1:915111612570:web:66cafbf24792fd32ae8f23"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
-
-    document.getElementById("contatoForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const nome = document.getElementById("nome").value;
-      const email = document.getElementById("email").value;
-      const mensagem = document.getElementById("mensagem").value;
-
-      set(ref(db, "mensagens/" + nome), {
-        nome: nome,
-        email: email,
-        mensagem: mensagem,
-        data: new Date().toISOString()
-      })
-        .then(() => {
-          document.getElementById("mensagemSucesso").classList.remove("d-none");
-          document.getElementById("contatoForm").reset();
-        })
-        .catch((error) => {
-          alert("Erro ao enviar mensagem: " + error.message);
-          console.error(error);
-        });
-    });
-  </script>
+  <!--Conexão com a API do Firebase -->
+  <script type="module" src="../js/firebase-contato.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
